@@ -98,26 +98,31 @@ testX = testX.astype("float32") / 255.0
 | Use this crossentropy loss function when there are two or more label classes. | Use this cross-entropy loss when there are only two label classes (assumed to be 0 and 1).|
 | ``` tf.keras.losses.categorical_crossentropy( y_true, y_pred, from_logits=False, label_smoothing=0 ) ``` | ``` tf.keras.losses.binary_crossentropy( y_true, y_pred, from_logits=False, label_smoothing=0 ) ``` |
 
-## Testing
+<h2 align="center">Optimizers Types</h2>
 
-```python
-def testing (modelx,testX,testY):       
-  (loss, acc) =  modelx.evaluate(testX, testY)
-  print("[INFO] test accuracy: {:.4f}".format(acc))
-```
-
-## Base Models Initializations
-```python
-# Fewer Layers (CNN)
-cnn_model_fewlayer=  models.Sequential()
-# Many Layers (CNN)
-cnn_model_manylayer=  models.Sequential()
-
-# Fewer Layers (FCN)
-few_layer_model = models.Sequential()
-# Many Layers (FCN)
-many_layer_model = models.Sequential()
-```
+### Momentum  
+* Momentum is like a ball rolling downhill. The ball will gain momentum as it rolls down the hill. 
+* Momentum helps accelerate Gradient Descent(GD) when we have surfaces that curve more steeply in one direction than in another direction.
+### Nesterov accelerated gradient(NAG)
+* Nesterov acceleration optimization is like a ball rolling down the hill but knows exactly when to slow down before the gradient of the hill increases again.
+### Adagrad — Adaptive Gradient Algorithm
+* Adagrad is an adaptive learning rate method. In Adagrad we adopt the learning rate to the parameters. We perform larger updates for infrequent parameters and smaller updates for frequent parameters.
+* It is well suited when we have sparse data as in large scale neural networks. GloVe word embedding uses adagrad where infrequent words required a greater update and frequent words require smaller updates.
+### Adadelta
+* Adadelta is an extension of Adagrad and it also tries to reduce Adagrad’s aggressive, monotonically reducing the learning rate.
+* It does this by restricting the window of the past accumulated gradient to some fixed size of w. Running average at time t then depends on the previous average and the current gradient.
+### RMSProp 
+* RMSProp is Root Mean Square Propagation. It was devised by Geoffrey Hinton. 
+* RMSProp tries to resolve Adagrad’s radically diminishing learning rates by using a moving average of the squared gradient. It utilizes the magnitude of the recent gradient descents to normalize the gradient.  
+### Adam — Adaptive Moment Estimation 
+* Another method that calculates the individual adaptive learning rate for each parameter from estimates of first and second moments of the gradients.
+* It also reduces the radically diminishing learning rates of Adagrad
+* Adam can be viewed as a combination of Adagrad, which works well on sparse gradients and RMSprop which works well in online and nonstationary settings.
+* Adam implements the exponential moving average of the gradients to scale the learning rate instead of a simple average as in Adagrad. It keeps an exponentially decaying average of past gradients
+### Nadam- Nesterov-accelerated Adaptive Moment Estimation
+* Nadam combines NAG and Adam
+* Nadam is employed for noisy gradients or for gradients with high curvatures
+* The learning process is accelerated by summing up the exponential decay of the moving averages for the previous and current gradient
 
 ## Improved Models Initializations (Pre-Trained)
 ```python
@@ -127,6 +132,40 @@ base_model = InceptionV3(input_shape = (256, 256, 3), include_top = False, weigh
 base_model = ResNet50(include_top=False, weights='imagenet')  
 # VGG16
 base_model = VGG16(input_shape = (256, 256, 3), include_top = False, weights = 'imagenet')
+```
+
+## Training Loop 
+
+```python
+def trainingloop(model,trainX,trainY,numbrofbatches,EPOCHS,optimizer) :
+  numUpdates = int(trainX.shape[0] / numbrofbatches) #1
+  epoch_loss_avg=[]
+  
+  # loop over the number of epochs
+  for epoch in range(0, EPOCHS):
+  epoch_loss_avg = tf.keras.metrics.Mean()
+  epoch_accuracy = tf.keras.metrics.SparseCategoricalAccuracy()
+  accuracy_for_each_epoah=np.array([])
+  sys.stdout.flush()
+  
+  # loop over the data in batch size increments
+  for i in range(0, numUpdates):
+  # determine starting and ending slice indexes for the current
+  # batch
+  start = i * numbrofbatches
+  end = start + numbrofbatches
+  
+  # take a step
+  loss=step(model,trainX[start:end], trainY[start:end],optimizer)#5
+  epoch_loss_avg.update_state(loss)
+```
+
+## Testing
+
+```python
+def testing (modelx,testX,testY):       
+  (loss, acc) =  modelx.evaluate(testX, testY)
+  print("[INFO] test accuracy: {:.4f}".format(acc))
 ```
 
 ## Results
