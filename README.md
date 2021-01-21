@@ -1,7 +1,7 @@
 # Chest X-Ray Diagnosis
 
 <p align="center">
-  <img src="https://github.com/OmarReda/Chest-X-Ray-Diagnosis/blob/main/image.jpg" width="500">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/image.jpg" width="500">
 </p>
 
 ## Problem Statement
@@ -22,7 +22,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
   - VGG 16
 
 <p align="center">
-  <img src="https://github.com/OmarReda/Chest-X-Ray-Diagnosis/blob/main/Diagram.png" width="700">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Diagram.png" width="700">
 </p>
 
 ## Dataset
@@ -37,7 +37,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
 * Matplotlib
 
 <p align="center">
-  <img src="https://github.com/OmarReda/Chest-X-Ray-Diagnosis/blob/main/source.gif"><img width="250" src="https://github.com/OmarReda/Chest-X-Ray-Diagnosis/blob/main/covid-19.gif">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/source.gif"><img width="250" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/covid-19.gif">
 </p>
 
 
@@ -56,6 +56,7 @@ Where, Y = true label, Y^ = Predicted Labels, and L(Y,Y^) is loss function.
 ```
 
 ## Data Augmentation
+Data Augmentation is a technique to increase the diversity of your training set by applying random (but realistic) transformations such as image rotation.
 ```python
 data_augmentation = tf.keras.Sequential([
   layers.experimental.preprocessing.RandomFlip("horizontal_and_vertical"), 
@@ -167,7 +168,7 @@ base_model = VGG16(input_shape = (256, 256, 3), include_top = False, weights = '
   </tr>
  </table>
  
- <p align="center"><img width="150" src="https://github.com/OmarReda/Chest-X-Ray-Diagnosis/blob/main/tenor.gif"></p>
+ <p align="center"><img width="150" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/tenor.gif"></p>
 
 
 
