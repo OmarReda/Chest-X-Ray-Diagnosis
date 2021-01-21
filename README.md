@@ -143,17 +143,17 @@ def trainingloop(model,trainX,trainY,numbrofbatches,EPOCHS,optimizer) :
   
   # loop over the number of epochs
   for epoch in range(0, EPOCHS):
-  epoch_loss_avg = tf.keras.metrics.Mean()
-  epoch_accuracy = tf.keras.metrics.SparseCategoricalAccuracy()
-  accuracy_for_each_epoah=np.array([])
-  sys.stdout.flush()
+    epoch_loss_avg = tf.keras.metrics.Mean()
+    epoch_accuracy = tf.keras.metrics.SparseCategoricalAccuracy()
+    accuracy_for_each_epoah=np.array([])
+    sys.stdout.flush()
   
   # loop over the data in batch size increments
   for i in range(0, numUpdates):
-  # determine starting and ending slice indexes for the current
-  # batch
-  start = i * numbrofbatches
-  end = start + numbrofbatches
+    # determine starting and ending slice indexes for the current
+    # batch
+    start = i * numbrofbatches
+    end = start + numbrofbatches
   
   # take a step
   loss=step(model,trainX[start:end], trainY[start:end],optimizer)#5
