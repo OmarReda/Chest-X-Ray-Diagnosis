@@ -40,6 +40,51 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/source.gif"><img width="250" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/covid-19.gif">
 </p>
 
+## Notebook Structure
+```
+├── Loading Images
+│   ├── API File
+│   └── Extract Images
+├── Imports
+├── Pathes
+├── Initialization & Images Reading
+├── Augmentation
+│   ├── Covid Augmentation
+│   ├── Normal Augmentation
+│   └── Viral Augmentation
+├── Constructing Labels & Dataset Arrays
+├── Splitting and Categorization
+│   ├── Split
+│   ├── Categorization (Labels' Encodeing )
+│   └── Normalization
+├── Training loop
+│   ├── HyperParameters
+│   ├── Step Function
+│   └── Main Training Function
+├── Testing
+│   └── Reporting Model Performance
+├── Basic Models
+│   ├── CNN Few Layers Model
+│   │   ├── Test Acurracy
+│   │   └── Report
+│   ├── CNN Many Layers Model
+│   │   ├── Test Acurracy
+│   │   └── Report
+│   ├── FCN Many Layers Model
+│   │   ├── Test Acurracy
+│   │   └── Report
+│   └── FCN Few Layers Model
+│       ├── Test Acurracy
+│       └── Report
+└── Pre-Trained Models
+    ├── VGG 16
+    │   └── Test Acurracy
+    ├── ResNet 50
+    │   └── Test Acurracy
+    └── Inception V3
+        └── Test Acurracy
+```
+
 
 ## Equations
 ```python
@@ -177,10 +222,10 @@ def testing (modelx,testX,testY):
 | CNN             | Few Layers     | 00%            |  00%           |  00%      | 00%      |  00%       |
 | CNN             | Many Layers    | 00%            |  00%           |  00%      | 00%      |  00%       |
 |                                                                                                        |
-| ResNet18        | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| ResNet50        | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| Inception v3    | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| VGG16           | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
+| ResNet 18       | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
+| ResNet 50       | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
+| Inception V3    | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
+| VGG 16          | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
 
 ## Confusion Matrix
 
