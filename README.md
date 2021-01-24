@@ -244,20 +244,20 @@ def testing (modelx,testX,testY):
 
 ### Basic Models Results
  
-| Models | Layers | Augmentation | Loss | Test Accuracy | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 | F1-Score Class3 | Recall Class3 | Precision Class3 |
-| :-------------- | :--------- | :----:| :----:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
-| Fully Connected | Few Layers | Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| Fully Connected | Many Layers| Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| CNN             | Few Layers | Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| CNN             | Many Layers| Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| Fully Connected | Few Layers | No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| Fully Connected | Many Layers| No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| CNN             | Few Layers | No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| CNN             | Many Layers| No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| Models | Layers | Augmentation | Loss | Test Accuracy | F1-Score Class0 | Recall Class0 | Precision Class0 | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 |
+| :-------------- | :--------- | :----:| :-------:| :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | 
+| Fully Connected | Few Layers | Yes   |  1.0535  |  77.66%  |  79.18%  |  88.75%  |  71.48%  |  84.04%  |  95.83%  |  74.84%  |  62.78%  |  46.39%  |  97.09%  |
+| Fully Connected | Many Layers| Yes   |  0.6131  |  64.67%  |  30.67%  |  24.03%  |  42.40%  |  91.15%  |  87.22%  |  95.44%  |  61.41%  |  77.36%  |  50.91%  |
+| CNN             | Few Layers | Yes   |  0.8994  |  85.75%  |  85.69%  |  85.69%  |  85.69%  |  89.19%  |  83.61%  |  95.56%  |  83.92%  |  89.17%  |  79.26%  |
+| CNN             | Many Layers| Yes   |  0.3850  |  89.80%  |  88.97%  |  95.83%  |  83.03%  |  95.22%  |  95.42%  |  95.02%  |  85.97%  |  79.17%  |  94.06%  |
+| Fully Connected | Few Layers | No    |  3.2310  |  86.54%  |  83.67%  |  97.51%  |  73.27%  |  94.27%  |  93.61%  |  94.93%  |  77.06%  |  64.85%  |  94.93%  |
+| Fully Connected | Many Layers| No    |  0.2188  |  91.66%  |  91.61%  |  88.31%  |  95.17%  |  94.07%  |  90.28%  |  98.19%  |  89.15%  |  95.54%  |  83.55%  |
+| CNN             | Few Layers | No    |  0.2063  |  94.28%  |  93.43%  |  97.26%  |  89.89%  |  96.68%  |  96.94%  |  96.41%  |  92.37%  |  88.37%  |  96.75%  |
+| CNN             | Many Layers| No    |  0.2039  |  93.33%  |  94.33%  |  95.27%  |  93.41%  |  93.53%  |  88.33%  |  99.38%  |  91.90%  |  95.54%  |  88.53%  |
 
 ### Improved Models Results
 
-| Models | Layers | Loss | Test Accuracy | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 | F1-Score Class3 | Recall Class3 | Precision Class3 |
+| Models | Layers | Loss | Test Accuracy | F1-Score Class0 | Recall Class0 | Precision Class0 | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 |
 | :---------- | :------------------------- | :----:| :----:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 | ResNet 50   | Pre-Trained Weights        |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
 | ResNet 50   | Pre-Trained Random Weights |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
