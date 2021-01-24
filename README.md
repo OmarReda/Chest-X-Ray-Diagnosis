@@ -293,12 +293,7 @@ def testing (modelx,testX,testY):
 | VGG 16      | Pre-Trained Weights        |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
 | VGG 16      | Pre-Trained Random Weights |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
 | VGG 16      | Pre-Trained Freezing Layers|  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| Inception V3| Pre-Trained Freezing Layers|  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-
-
-## Confusion Matrix
-
-* #TODO
+| Inception V3| Pre-Trained Freezing Layers|  0.1634  |  96.40%  |  94.48%  |  91.53%  |  97.63%  |  98.95%  |  98.61%  |  99.30%  |  94.77%  |  98.06%  |  91.69%  |
 
 <hr>
 
