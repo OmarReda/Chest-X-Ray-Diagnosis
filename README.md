@@ -235,32 +235,31 @@ def testing (modelx,testX,testY):
 3. **Fixed feature extraction mechanism**, the main idea is to keep the convolutional base in its original form and then use its outputs to feed the classifier. 
 
 
-
 ## Results
 
 ### Basic Models Results
  
-| Models          | Layers         | Augmentation   | Loss           | Test Accuracy  | F1-Score  | Recall   | Precision  |
-| :-------------- | :------------- | :-------------:| :-------------:| :-------------:| :-------: | :------: | :--------: |
-| Fully Connected | Few Layers     | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
-| Fully Connected | Many Layers    | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
-| CNN             | Few Layers     | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
-| CNN             | Many Layers    | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
-| Fully Connected | Few Layers     | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
-| Fully Connected | Many Layers    | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
-| CNN             | Few Layers     | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
-| CNN             | Many Layers    | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
+| Models | Layers | Augmentation | Loss | Test Accuracy | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 | F1-Score Class3 | Recall Class3 | Precision Class3 |
+| :-------------- | :--------- | :----:| :----:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
+| Fully Connected | Few Layers | Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| Fully Connected | Many Layers| Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| CNN             | Few Layers | Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| CNN             | Many Layers| Yes   |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| Fully Connected | Few Layers | No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| Fully Connected | Many Layers| No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| CNN             | Few Layers | No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| CNN             | Many Layers| No    |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
 
 ### Improved Models Results
 
-| Models          | Layers                        |  Loss          | Test Accuracy  | F1-Score  | Recall   | Precision  |
-| :-------------- | :---------------------------- | :-------------:| :-------------:| :-------: | :------: | :--------: |
-| ResNet 50       | Pre-Trained Weights           |  00%           |  00%           |  00%      | 00%      |  00%       |
-| ResNet 50       | Pre-Trained Random Weights    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| VGG 16          | Pre-Trained Weights           |  00%           |  00%           |  00%      | 00%      |  00%       |
-| VGG 16          | Pre-Trained Random Weights    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| VGG 16          | Pre-Trained Freezing Layers   |  00%           |  00%           |  00%      | 00%      |  00%       |
-| Inception V3    | Pre-Trained Freezing Layers   |  00%           |  00%           |  00%      | 00%      |  00%       |
+| Models | Layers | Loss | Test Accuracy | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 | F1-Score Class3 | Recall Class3 | Precision Class3 |
+| :---------- | :------------------------- | :----:| :----:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
+| ResNet 50   | Pre-Trained Weights        |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| ResNet 50   | Pre-Trained Random Weights |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| VGG 16      | Pre-Trained Weights        |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| VGG 16      | Pre-Trained Random Weights |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| VGG 16      | Pre-Trained Freezing Layers|  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| Inception V3| Pre-Trained Freezing Layers|  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
 
 
 ## Confusion Matrix
