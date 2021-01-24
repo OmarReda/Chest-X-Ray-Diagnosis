@@ -65,23 +65,52 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
 │   └── Reporting Model Performance
 ├── Basic Models
 │   ├── CNN Few Layers Model
-│   │   ├── Test Acurracy
-│   │   └── Report
+|   |   ├── Layers
+│   │   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
+|   |   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
 │   ├── CNN Many Layers Model
-│   │   ├── Test Acurracy
-│   │   └── Report
+|   |   ├── Layers
+│   │   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
+|   |   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
 │   ├── FCN Many Layers Model
-│   │   ├── Test Acurracy
-│   │   └── Report
+|   |   ├── Layers
+│   │   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
+|   |   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
 │   └── FCN Few Layers Model
-│       ├── Test Acurracy
-│       └── Report
+|   |   ├── Layers
+│   │   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
+|   |   ├── With Augmentation
+│   │   |   ├── Test Accuracy
+│   │   |   └── Report
 └── Pre-Trained Models
     ├── VGG 16
-    │   └── Test Acurracy
+    │   ├── Unweighted
+    |   |   └── Test Acurracy  
+    │   ├── Weighted (Freezing Ealier Layers)
+    |   |   └── Test Acurracy  
+    |   └── Weighted  All Layers  Is Traniable
+    |   |   └── Test Acurracy
     ├── ResNet 50
-    │   └── Test Acurracy
+    │   ├── Unweighted
+    |   |   └── Test Acurracy  
+    │   ├── Weighted 
+    |   |   └── Test Acurracy  
     └── Inception V3
+        ├── Freezing
         └── Test Acurracy
 ```
 
