@@ -247,7 +247,7 @@ def testing (modelx,testX,testY):
 | Models | Layers | Augmentation | Loss | Test Accuracy | F1-Score Class0 | Recall Class0 | Precision Class0 | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 |
 | :-------------- | :--------- | :----:| :-------:| :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | 
 | Fully Connected | Few Layers | Yes   |  1.0535  |  77.66%  |  79.18%  |  88.75%  |  71.48%  |  84.04%  |  95.83%  |  74.84%  |  62.78%  |  46.39%  |  97.09%  |
-| Fully Connected | Many Layers| Yes   |  0.6131  |  64.67%  |  30.67%  |  24.03%  |  42.40%  |  91.15%  |  87.22%  |  95.44%  |  61.41%  |  77.36%  |  50.91%  |
+| Fully Connected | Many Layers| Yes   |  0.4197  |  84.15%  |  82.02%  |  80.14%  |  83.99%  |  90.60%  |  97.78%  |  84.41%  |  79.32%  |  74.86%  |  84.35%  |
 | CNN             | Few Layers | Yes   |  0.8994  |  85.75%  |  85.69%  |  85.69%  |  85.69%  |  89.19%  |  83.61%  |  95.56%  |  83.92%  |  89.17%  |  79.26%  |
 | CNN             | Many Layers| Yes   |  0.3850  |  89.80%  |  88.97%  |  95.83%  |  83.03%  |  95.22%  |  95.42%  |  95.02%  |  85.97%  |  79.17%  |  94.06%  |
 | Fully Connected | Few Layers | No    |  3.2310  |  86.54%  |  83.67%  |  97.51%  |  73.27%  |  94.27%  |  93.61%  |  94.93%  |  77.06%  |  64.85%  |  94.93%  |
