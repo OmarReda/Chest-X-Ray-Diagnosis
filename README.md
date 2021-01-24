@@ -130,21 +130,35 @@ testX = testX.astype("float32") / 255.0
 
 ## Essential Comparisons
 
+| Problem Type     | Output Type                        | Final Activation Function | Loss Function          |
+| :--------------  | :--------------------------------  | :-----------------------  | :--------------------  |
+| Regression 	     | Numerical Value                    | Linear	                  | Mean Squar Error (MSE) |
+| Classsification  | Binary Outcome                     | Sigmoid                   |  Binary Cross Entropy  |
+| Classsification  | Single Label, Multiple Classes	    | Softmax                   |  Cross Entropy         |
+| Classsification  | Multiple Labels, Multiple Classes	| Sigmoid                   |  Binary Cross Entropy  |
+
 | Softmax     | Sigmoid     |
-| :----------: | :----------: |
-| Used for multi-classification in logistic regression model.	| Used for binary classification in logistic regression model. |
-| The probabilities sum will be 1  | The probabilities sum need not be 1. |
-| Used in the different layers of neural networks.	| Used as activation function while building neural networks. |
+| :------------------------------------------------------------------ | :----------------------------------------------------------------------------- |
+| Used for multi-classification in logistic regression model.	        | Used for binary classification in logistic regression model.                   |
+| The probabilities sum will be 1                                     | The probabilities sum need not be 1.                                           |
+| Used in the different layers of neural networks.	                  | Used as activation function while building neural networks.                    |
 | The high value will have the higher probability than other values.	|  The high value will have the high probability but not the higher probability. |
 
 | CategoricalCrossentropy class | BinaryCrossentropy class |
-| :---------------------------: | :----------------------: |
+| :---------------------------  | :----------------------  |
 | Computes the crossentropy loss between the labels and predictions. | Computes the cross-entropy loss between true labels and predicted labels. |
 | Use this crossentropy loss function when there are two or more label classes. | Use this cross-entropy loss when there are only two label classes (assumed to be 0 and 1).|
 | ``` tf.keras.losses.categorical_crossentropy( y_true, y_pred, from_logits=False, label_smoothing=0 ) ``` | ``` tf.keras.losses.binary_crossentropy( y_true, y_pred, from_logits=False, label_smoothing=0 ) ``` |
 
+
+## Graphs
+<img width="500" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/graphs.png">
+
+
 <h2 align="center">Optimizers Types</h2>
 
+### Gradient Descent 
+* Gradient descent is an optimization algorithm that's used when training a machine learning model. It's based on a convex function and tweaks its parameters iteratively to minimize a given function to its local minimum.
 ### Momentum  
 * Momentum is like a ball rolling downhill. The ball will gain momentum as it rolls down the hill. 
 * Momentum helps accelerate Gradient Descent(GD) when we have surfaces that curve more steeply in one direction than in another direction.
@@ -212,20 +226,32 @@ def testing (modelx,testX,testY):
   (loss, acc) =  modelx.evaluate(testX, testY)
   print("[INFO] test accuracy: {:.4f}".format(acc))
 ```
-
 ## Results
 
-| Models          | Layers         | Loss           | Test Accuracy  | F1-Score  | Recall   | Precision  |
-| :-------------- | :------------- | :-------------:| :-------------:| :-------: | :------: | :--------: |
-| Fully Connected | Few Layers     | 00%            |  00%           |  00%      | 00%      |  00%       |
-| Fully Connected | Many Layers    | 00%            |  00%           |  00%      | 00%      |  00%       |
-| CNN             | Few Layers     | 00%            |  00%           |  00%      | 00%      |  00%       |
-| CNN             | Many Layers    | 00%            |  00%           |  00%      | 00%      |  00%       |
-|                                                                                                        |
-| ResNet 18       | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| ResNet 50       | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| Inception V3    | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
-| VGG 16          | Pre-Trained    |  00%           |  00%           |  00%      | 00%      |  00%       |
+### Basic Models Results
+ 
+| Models          | Layers         | Augmentation   | Loss           | Test Accuracy  | F1-Score  | Recall   | Precision  |
+| :-------------- | :------------- | :-------------:| :-------------:| :-------------:| :-------: | :------: | :--------: |
+| Fully Connected | Few Layers     | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
+| Fully Connected | Many Layers    | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
+| CNN             | Few Layers     | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
+| CNN             | Many Layers    | Yes            | 00%            |  00%           |  00%      | 00%      |  00%       |
+| Fully Connected | Few Layers     | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
+| Fully Connected | Many Layers    | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
+| CNN             | Few Layers     | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
+| CNN             | Many Layers    | No             | 00%            |  00%           |  00%      | 00%      |  00%       |
+
+### Improved Models Results
+
+| Models          | Layers                        |  Loss          | Test Accuracy  | F1-Score  | Recall   | Precision  |
+| :-------------- | :---------------------------- | :-------------:| :-------------:| :-------: | :------: | :--------: |
+| ResNet 50       | Pre-Trained Weights           |  00%           |  00%           |  00%      | 00%      |  00%       |
+| ResNet 50       | Pre-Trained Random Weights    |  00%           |  00%           |  00%      | 00%      |  00%       |
+| VGG 16          | Pre-Trained Weights           |  00%           |  00%           |  00%      | 00%      |  00%       |
+| VGG 16          | Pre-Trained Random Weights    |  00%           |  00%           |  00%      | 00%      |  00%       |
+| VGG 16          | Pre-Trained Freezing Layers   |  00%           |  00%           |  00%      | 00%      |  00%       |
+| Inception V3    | Pre-Trained Freezing Layers   |  00%           |  00%           |  00%      | 00%      |  00%       |
+
 
 ## Confusion Matrix
 
