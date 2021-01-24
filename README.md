@@ -226,6 +226,16 @@ def testing (modelx,testX,testY):
   (loss, acc) =  modelx.evaluate(testX, testY)
   print("[INFO] test accuracy: {:.4f}".format(acc))
 ```
+
+## Pre-Trained Models Strategies
+1. **Train the entire model**, you use the architecture of the pre-trained model and train it. you’ll need a large dataset (and a lot of computational power).
+2. **Train some layers and leave the others frozen**, as you remember, lower layers refer to general features, while higher layers refer to specific features. Here, we play with that dichotomy by choosing how much we want to adjust the weights of the network (a frozen layer does not change during training).  
+  *  *Small data set -> leave more layers frozen to avoid overfitting.*					
+  *  *Large dataset -> improve your model by training more layers.*
+3. **Fixed feature extraction mechanism**, the main idea is to keep the convolutional base in its original form and then use its outputs to feed the classifier. 
+
+
+
 ## Results
 
 ### Basic Models Results
