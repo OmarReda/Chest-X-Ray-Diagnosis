@@ -186,11 +186,16 @@ testX = testX.astype("float32") / 255.0
 ## Improved Models Initializations (Pre-Trained)
 ```python
 # Inception V3 
-base_model = InceptionV3(input_shape = (256, 256, 3), include_top = False, weights = 'imagenet')
+base_model = InceptionV3(input_shape = (256, 256, 3), include_top = False, weights = 'imagenet') first  200 layer is false(freezing)
+  
 # ResNet50
-base_model = ResNet50(include_top=False, weights='imagenet')  
+base_model = ResNet50(input_shape = (256, 256, 3),include_top=False, weights='imagenet')  
+base_model = ResNet50(input_shape = (256, 256, 3),include_top=False, weights='None)  
+
 # VGG16
 base_model = VGG16(input_shape = (256, 256, 3), include_top = False, weights = 'imagenet')
+base_model = VGG16(input_shape = (256, 256, 3), include_top = False, weights = 'imagenet') && all trainable layers is false (freezing)
+base_model = VGG16(input_shape = (256, 256, 3), include_top = False, weights = None)  
 ```
 
 ## Training Loop 
