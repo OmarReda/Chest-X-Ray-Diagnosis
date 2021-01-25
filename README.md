@@ -218,6 +218,8 @@ testX = testX.astype("float32") / 255.0
 <p align="center">
   <img src="https://cs231n.github.io/assets/nn3/opt1.gif"><img width="500"
 </p>
+  
+  
 ## Hyperparameter 
 
 * EPOCHS =  10                                                               
