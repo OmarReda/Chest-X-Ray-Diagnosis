@@ -29,7 +29,7 @@
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#pre-trained-models-strategies">Pre-Trained Models Strategies</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#results">Results</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#plots">Plots</a>
-* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#reference">References</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#references">References</a>
 
 
 ## Problem Statement
@@ -261,7 +261,7 @@ Loss_Function = CrossEntropy
 ## Fully Connected Layers & Convolution
 <p align="center">
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Neural%20Net.gif" width="800">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Conv.gif" width="400" height="350">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Conv.gif" width="400" height="250">
 </p>
 
 ## Improved Models Initializations (Pre-Trained)
