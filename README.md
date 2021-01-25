@@ -146,7 +146,9 @@ Y = np.concatenate((Covidlabel,Normallabel,Virallabel))
 
 ## Splitting Data
 ```python
-x_train, x_test, y_train, y_test = train_test_split(Dataset,Y , test_size=0.3, random_state=40)
+x_train, x_test, y_train, y_test = train_test_split(Dataset,Y , test_size=0.3,random_state=40, stratify=Y)
+x_train, x_val, y_train, y_val= train_test_split(x_train,y_train, test_size=0.2, random_state=1,stratify=y_train)
+
 ```
 
 ## Encodeing & Normalization
@@ -211,6 +213,13 @@ testX = testX.astype("float32") / 255.0
 * Nadam combines NAG and Adam
 * Nadam is employed for noisy gradients or for gradients with high curvatures
 * The learning process is accelerated by summing up the exponential decay of the moving averages for the previous and current gradient
+
+## Hyperparameter 
+
+* EPOCHS =  10                                                               
+* BS = 64                                                                         
+* INIT_LR = 1e-3                                                                  
+* The number of layers differs from one model to another
 
 ## Improved Models Initializations (Pre-Trained)
 ```python
