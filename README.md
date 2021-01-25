@@ -349,26 +349,26 @@ def testing (modelx,testX,testY):
 
 ### Basic Models Plots
 > Hover Over Plots To Check Model Name
-<p>
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic1.PNG" width="300" title="CNN Few Layers With Augmentation">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic2.PNG" width="300" title="CNN Few Layers Without Augmentation">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic3.PNG" width="300" title="CNN Many Layers With Augmentation">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic4.PNG" width="300" title="CNN Many Layers Without Augmentation">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic5.PNG" width="300" title="FCN Many Layers With Augmentation">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic6.PNG" width="300" title="FCN Many Layers Without Augmentation">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic7.PNG" width="300" title="FCN Few Layers With Augmentation">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic8.PNG" width="300" title="FCN Few Layers Without Augmentation">
+<p align="center">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic1.PNG" width="250" title="CNN Few Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic2.PNG" width="250" title="CNN Few Layers Without Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic3.PNG" width="250" title="CNN Many Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic4.PNG" width="250" title="CNN Many Layers Without Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic5.PNG" width="250" title="FCN Many Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic6.PNG" width="250" title="FCN Many Layers Without Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic7.PNG" width="250" title="FCN Few Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic8.PNG" width="250" title="FCN Few Layers Without Augmentation">
 </p>
 
 ### Improved Models Plots
 > Hover Over Plots To Check Model Name
-<p>
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved1.PNG" width="300" title="VGG 16 Unweighted">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved2.PNG" width="300" title="VGG 16 Weighted With Freezing Early Layers">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved3.PNG" width="300" title="VGG 16 Weighted With All Layers Trained">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved4.PNG" width="300" title="ResNet 50 Unweighted">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved5.PNG" width="300" title="ResNet 50 Weighted">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved6.PNG" width="300" title="Inception V3 With Freezing Early Layers">
+<p align="center">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved1.PNG" width="250" title="VGG 16 Unweighted">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved2.PNG" width="250" title="VGG 16 Weighted With Freezing Early Layers">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved3.PNG" width="250" title="VGG 16 Weighted With All Layers Trained">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved4.PNG" width="250" title="ResNet 50 Unweighted">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved5.PNG" width="250" title="ResNet 50 Weighted">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved6.PNG" width="250" title="Inception V3 With Freezing Early Layers">
 </p>
 
 <!--
