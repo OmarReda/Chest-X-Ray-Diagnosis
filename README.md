@@ -20,7 +20,8 @@
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#essential-comparisons">Essential Comparisons</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#graphs">Graphs</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#optimizers-types">Optimizer Types</a>
-* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#hyper-parameters">Hyper-parameters</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#fully-connected-layers--convolution">Fully Connected Layers & Convolution</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#">Hyper-parameters</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#improved-models-initializations-pre-trained">Improved Models Initializations</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#training-loop">Training Loop</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#step-function">Step Function</a>
@@ -28,6 +29,7 @@
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#pre-trained-models-strategies">Pre-Trained Models Strategies</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#results">Results</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#plots">Plots</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#reference">References</a>
 
 
 ## Problem Statement
@@ -256,6 +258,12 @@ Loss_Function = CrossEntropy
 # The Number Of Layers Differs From One Model To Another
 ```
 
+## Fully Connected Layers & Convolution
+<p align="center">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Neural%20Net.gif" width="800">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Conv.gif" width="400" height="350">
+</p>
+
 ## Improved Models Initializations (Pre-Trained)
 ```python
 # Inception V3 
@@ -321,10 +329,6 @@ def testing (modelx,testX,testY):
   *  *Large dataset -> improve your model by training more layers.*
 3. **Fixed feature extraction mechanism**, the main idea is to keep the convolutional base in its original form and then use its outputs to feed the classifier. 
 
-<p align="center">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Neural%20Net.gif" width="800">
-</p>
-
 ## Results
 
 ### Basic Models Results
@@ -374,6 +378,10 @@ def testing (modelx,testX,testY):
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved5.PNG" width="250" title="ResNet 50 Weighted">
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved6.PNG" width="250" title="Inception V3 With Freezing Early Layers">
 </p>
+
+## References
+* <a href="https://link.springer.com/article/10.1007/s10489-020-01902-1">Deep learning based detection and analysis of COVID-19 on chest X-ray images</a>
+* <a href="https://cv-tricks.com/keras/understand-implement-resnets/">Detailed Guide to Understand and Implement ResNets</a>
 
 <!--
 ## Contributors
