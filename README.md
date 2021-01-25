@@ -243,9 +243,8 @@ testX = testX.astype("float32") / 255.0
 * The learning process is accelerated by summing up the exponential decay of the moving averages for the previous and current gradient
 
 <p align="center">
-  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/GD.gif" width="400"><img src="https://cs231n.github.io/assets/nn3/opt1.gif" width="400">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/GD.gif" width="400" height="300"><img src="https://cs231n.github.io/assets/nn3/opt1.gif" width="400" height="300">
 </p>
-  
   
 ## Hyper-parameters
 ```python
