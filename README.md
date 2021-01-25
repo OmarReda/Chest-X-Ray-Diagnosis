@@ -139,8 +139,8 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
     │   ├── Weighted 
     |   |   └── Test Acurracy  
     └── Inception V3
-        ├── Freezing
-        └── Test Acurracy
+         └── Freezing
+            └── Test Acurracy 
 ```
 
 
