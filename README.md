@@ -4,6 +4,32 @@
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/image.jpg" width="500">
 </p>
 
+## Table Of Content
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#problem-statement">Problem Statement</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#basic-implemented-models">Basic Implemented Models</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#improved-models">Improved Models</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#dataset">Dataset</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#libraries">Libraries</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#notebook-structure">Notebook Structure</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#equations">Equations</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#loss-function">Loss Function</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#data-augmentation">Data Augmentation</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#constructing-labels--dataset-arrays">Constructing Labels & Dataset Arrays</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#splitting-data">Splitting Data</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#encoding--normalization">Encoding & Normalization</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#essentials-comparisons">Essential Comparisons</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#graphs">Graphs</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#optimizer-types">Optimizer Types</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#hyper-parameters">Hyper-parameters</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#improved-models-initialization">Improved Models Initialization</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#training-loop">Training Loop</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#step-function">Step Function</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#testing">Testing</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#pre-trained-models-strategies">Pre-Trained Models Strategies</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#results">Results</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#plots">Plots</a>
+
+
 ## Problem Statement
 Given the chest X-ray dataset, our goal is to build a range of neural networks to diagnose chest X-rays. Our database consists of patients suffering from COVID-19, Pneumonia, and normal Patients (3 classes).
 
@@ -17,7 +43,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
 
 ## Improved Models
 * Famous backbones.
-  - ResNet 18-50
+  - ResNet 50
   - Inception V3
   - VGG 16
 
@@ -184,8 +210,9 @@ testX = testX.astype("float32") / 255.0
 
 
 ## Graphs
-<img width="500" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/graphs.png">
-
+<p align="center">
+  <img width="500" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/graphs.gif">
+</p>
 
 <h2 align="center">Optimizers Types</h2>
 
@@ -220,7 +247,7 @@ testX = testX.astype("float32") / 255.0
 </p>
   
   
-## Hyperparameter 
+## Hyper-parameters
 ```python
 EPOCHS =  10                                                               
 BS = 64                                                                         
@@ -299,7 +326,6 @@ def testing (modelx,testX,testY):
 ## Results
 
 ### Basic Models Results
- 
 | Models | Layers | Augmentation | Loss | Test Accuracy | F1-Score Class0 | Recall Class0 | Precision Class0 | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 |
 | :-------------- | :--------- | :----:| :-------:| :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | :------: | 
 | Fully Connected | Few Layers | Yes   |  1.0535  |  77.66%  |  79.18%  |  88.75%  |  71.48%  |  84.04%  |  95.83%  |  74.84%  |  62.78%  |  46.39%  |  97.09%  |
@@ -312,7 +338,6 @@ def testing (modelx,testX,testY):
 | CNN             | Many Layers| No    |  0.2039  |  93.33%  |  94.33%  |  95.27%  |  93.41%  |  93.53%  |  88.33%  |  99.38%  |  91.90%  |  95.54%  |  88.53%  |
 
 ### Improved Models Results
-
 | Models | Layers | Loss | Test Accuracy | F1-Score Class0 | Recall Class0 | Precision Class0 | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 |
 | :---------- | :------------------------- | :----:| :----:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
 | ResNet 50   | Pre-Trained Weighted       |  0.2736  |  97.03%  |  96.86%  |  96.02%  |  97.72%  |  98.74%  |  98.33%  |  99.16%  |  96.58%  |  97.77%  |  95.41%  |
@@ -322,7 +347,29 @@ def testing (modelx,testX,testY):
 | VGG 16      | Pre-Trained Freezing Layers|  0.2088  |  95.06%  |  93.58%  |  99.75%  |  88.13%  |  98.34%  |  98.89%  |  97.80%  |  91.88%  |  95.40%  |  99.42%  |
 | Inception V3| Pre-Trained Freezing Layers|  0.1634  |  96.40%  |  94.48%  |  91.53%  |  97.63%  |  98.95%  |  98.61%  |  99.30%  |  94.77%  |  98.06%  |  91.69%  |
 
-<hr>
+### Basic Models Plots
+> Hover Over Plots To Check Model Name
+<p>
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic1.PNG" width="300" title="CNN Few Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic2.PNG" width="300" title="CNN Few Layers Without Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic3.PNG" width="300" title="CNN Many Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic4.PNG" width="300" title="CNN Many Layers Without Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic5.PNG" width="300" title="FCN Many Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic6.PNG" width="300" title="FCN Many Layers Without Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic7.PNG" width="300" title="FCN Few Layers With Augmentation">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Basic8.PNG" width="300" title="FCN Few Layers Without Augmentation">
+</p>
+
+### Improved Models Plots
+> Hover Over Plots To Check Model Name
+<p>
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved1.PNG" width="300" title="VGG 16 Unweighted">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved2.PNG" width="300" title="VGG 16 Weighted With Freezing Early Layers">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved3.PNG" width="300" title="VGG 16 Weighted With All Layers Trained">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved4.PNG" width="300" title="ResNet 50 Unweighted">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved5.PNG" width="300" title="ResNet 50 Weighted">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Plots/Improved6.PNG" width="300" title="Inception V3 With Freezing Early Layers">
+</p>
 
 <!--
 ## Contributors
