@@ -169,7 +169,7 @@ testX = testX.astype("float32") / 255.0
 | Classsification  | Single Label, Multiple Classes	    | Softmax                   |  Cross Entropy         |
 | Classsification  | Multiple Labels, Multiple Classes	| Sigmoid                   |  Binary Cross Entropy  |
 
-| Softmax     | Sigmoid     |
+| Softmax                                                             | Sigmoid                                                                        |
 | :------------------------------------------------------------------ | :----------------------------------------------------------------------------- |
 | Used for multi-classification in logistic regression model.	        | Used for binary classification in logistic regression model.                   |
 | The probabilities sum will be 1                                     | The probabilities sum need not be 1.                                           |
@@ -216,16 +216,19 @@ testX = testX.astype("float32") / 255.0
 * The learning process is accelerated by summing up the exponential decay of the moving averages for the previous and current gradient
 
 <p align="center">
-  <img src="https://cs231n.github.io/assets/nn3/opt1.gif"><img width="500"
+  <img src="https://cs231n.github.io/assets/nn3/opt1.gif" width="500">
 </p>
   
   
 ## Hyperparameter 
-
-* EPOCHS =  10                                                               
-* BS = 64                                                                         
-* INIT_LR = 1e-3                                                                  
-* The number of layers differs from one model to another
+```python
+EPOCHS =  10                                                               
+BS = 64                                                                         
+INIT_LR = 1e-3
+Optimizer = Adam
+Loss_Function = CrossEntropy
+# The Number Of Layers Differs From One Model To Another
+```
 
 ## Improved Models Initializations (Pre-Trained)
 ```python
@@ -265,6 +268,7 @@ def trainingloop(model,trainX,trainY,numbrofbatches,EPOCHS,optimizer) :
   loss=step(model,trainX[start:end], trainY[start:end],optimizer)#5
   epoch_loss_avg.update_state(loss)
 ```
+
 ## Step function
 ```python 
 def step(model,x, y,optimizer):
@@ -274,12 +278,10 @@ def step(model,x, y,optimizer):
     loss = categorical_crossentropy(y, pred)
   grads = tape.gradient(loss,model.trainable_variables)
   optimizer.apply_gradients(zip(grads,model.trainable_variables))
-  
   return loss  
 ```  
 
 ## Testing
-
 ```python
 def testing (modelx,testX,testY):       
   (loss, acc) =  modelx.evaluate(testX, testY)
@@ -303,9 +305,9 @@ def testing (modelx,testX,testY):
 | Fully Connected | Few Layers | Yes   |  1.0535  |  77.66%  |  79.18%  |  88.75%  |  71.48%  |  84.04%  |  95.83%  |  74.84%  |  62.78%  |  46.39%  |  97.09%  |
 | Fully Connected | Many Layers| Yes   |  0.4197  |  84.15%  |  82.02%  |  80.14%  |  83.99%  |  90.60%  |  97.78%  |  84.41%  |  79.32%  |  74.86%  |  84.35%  |
 | CNN             | Few Layers | Yes   |  0.8994  |  85.75%  |  85.69%  |  85.69%  |  85.69%  |  89.19%  |  83.61%  |  95.56%  |  83.92%  |  89.17%  |  79.26%  |
-| CNN             | Many Layers| Yes   |  0.3850  |  89.80%  |  88.97%  |  95.83%  |  83.03%  |  95.22%  |  95.42%  |  95.02%  |  85.97%  |  79.17%  |  94.06%  |
-| Fully Connected | Few Layers | No    |  3.2310  |  86.54%  |  83.67%  |  97.51%  |  73.27%  |  94.27%  |  93.61%  |  94.93%  |  77.06%  |  64.85%  |  94.93%  |
-| Fully Connected | Many Layers| No    |  0.2188  |  91.66%  |  91.61%  |  88.31%  |  95.17%  |  94.07%  |  90.28%  |  98.19%  |  89.15%  |  95.54%  |  83.55%  |
+| CNN             | Many Layers| Yes   |  0.3850  |  90.18%  |  89.35%  |  81.53%  |  94.07%  |  90.66%  |  97.78%  |  84.51%  |  87.07%  |  86.67%  |  88.76%  |
+| Fully Connected | Few Layers | No    |  2.3815  |  82.76%  |  80.32%  |  98.51%  |  67.81%  |  91.48%  |  85.00%  |  90.03%  |  74.15%  |  62.13%  |  91.94%  |
+| Fully Connected | Many Layers| No    |  0.7163  |  88.78%  |  88.03%  |  82.34%  |  94.87%  |  92.51%  |  87.50%  |  98.13%  |  85.87%  |  95.54%  |  77.98%  |
 | CNN             | Few Layers | No    |  0.2063  |  94.28%  |  93.43%  |  97.26%  |  89.89%  |  96.68%  |  96.94%  |  96.41%  |  92.37%  |  88.37%  |  96.75%  |
 | CNN             | Many Layers| No    |  0.2039  |  93.33%  |  94.33%  |  95.27%  |  93.41%  |  93.53%  |  88.33%  |  99.38%  |  91.90%  |  95.54%  |  88.53%  |
 
@@ -313,17 +315,19 @@ def testing (modelx,testX,testY):
 
 | Models | Layers | Loss | Test Accuracy | F1-Score Class0 | Recall Class0 | Precision Class0 | F1-Score Class1 | Recall Class1 | Precision Class1 | F1-Score Class2 | Recall Class2 | Precision Class2 |
 | :---------- | :------------------------- | :----:| :----:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | 
-| ResNet 50   | Pre-Trained Weights        |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| ResNet 50   | Pre-Trained Random Weights |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| VGG 16      | Pre-Trained Weights        |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| VGG 16      | Pre-Trained Random Weights |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
-| VGG 16      | Pre-Trained Freezing Layers|  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |  00%  |
+| ResNet 50   | Pre-Trained Weighted       |  0.2736  |  97.03%  |  96.86%  |  96.02%  |  97.72%  |  98.74%  |  98.33%  |  99.16%  |  96.58%  |  97.77%  |  95.41%  |
+| ResNet 50   | Pre-Trained Unweighted     |  0.2559  |  94.08%  |  93.28%  |  91.54%  |  95.09%  |  97.02%  |  96.11%  |  98.03%  |  92.18%  |  94.80%  |  98.70%  |
+| VGG 16      | Pre-Trained Weighted       |  0.1652  |  95.05%  |  95.10%  |  96.52%  |  93.72%  |  85.89%  |  93.89%  |  97.97%  |  92.97%  |  93.32%  |  92.63%  |
+| VGG 16      | Pre-Trained Unweighted     |  0.2316  |  92.38%  |  92.29%  |  98.26%  |  87.00%  |  94.22%  |  90.56%  |  98.19%  |  91.07%  |  88.37%  |  93.95%  |
+| VGG 16      | Pre-Trained Freezing Layers|  0.2088  |  95.06%  |  93.58%  |  99.75%  |  88.13%  |  98.34%  |  98.89%  |  97.80%  |  91.88%  |  95.40%  |  99.42%  |
 | Inception V3| Pre-Trained Freezing Layers|  0.1634  |  96.40%  |  94.48%  |  91.53%  |  97.63%  |  98.95%  |  98.61%  |  99.30%  |  94.77%  |  98.06%  |  91.69%  |
 
 <hr>
 
+<!--
 ## Contributors
-
+-->
+<!--
 <table>
   <tr>
     <td align="center">
@@ -340,8 +344,11 @@ def testing (modelx,testX,testY):
     </td>
   </tr>
  </table>
- 
- <p align="center"><img width="150" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/tenor.gif"></p>
+-->
+
+<p align="center">
+  <img width="150" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/tenor.gif">
+</p>
 
 
 
