@@ -243,7 +243,7 @@ testX = testX.astype("float32") / 255.0
 * The learning process is accelerated by summing up the exponential decay of the moving averages for the previous and current gradient
 
 <p align="center">
-  <img src="https://cs231n.github.io/assets/nn3/opt1.gif" width="500">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/GD.gif" width="400"><img src="https://cs231n.github.io/assets/nn3/opt1.gif" width="400">
 </p>
   
   
@@ -322,6 +322,9 @@ def testing (modelx,testX,testY):
   *  *Large dataset -> improve your model by training more layers.*
 3. **Fixed feature extraction mechanism**, the main idea is to keep the convolutional base in its original form and then use its outputs to feed the classifier. 
 
+<p align="center">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Neural%20Net.gif" width="800">
+</p>
 
 ## Results
 
