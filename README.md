@@ -240,18 +240,28 @@ def trainingloop(model,trainX,trainY,numbrofbatches,EPOCHS,optimizer) :
     epoch_accuracy = tf.keras.metrics.SparseCategoricalAccuracy()
     accuracy_for_each_epoah=np.array([])
     sys.stdout.flush()
-  
   # loop over the data in batch size increments
   for i in range(0, numUpdates):
     # determine starting and ending slice indexes for the current
     # batch
     start = i * numbrofbatches
     end = start + numbrofbatches
-  
   # take a step
   loss=step(model,trainX[start:end], trainY[start:end],optimizer)#5
   epoch_loss_avg.update_state(loss)
 ```
+## Step function
+```python 
+def step(model,x, y,optimizer):
+# keep track of our gradients
+  with tf.GradientTape() as tape:
+    pred = model(x)
+    loss = categorical_crossentropy(y, pred)
+  grads = tape.gradient(loss,model.trainable_variables)
+  optimizer.apply_gradients(zip(grads,model.trainable_variables))
+  
+  return loss  
+```  
 
 ## Testing
 
