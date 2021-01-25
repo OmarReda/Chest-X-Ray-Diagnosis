@@ -40,6 +40,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/source.gif"><img width="250" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/covid-19.gif">
 </p>
 
+
 ## Notebook Structure
 ```
 ├── Loading Images
@@ -214,6 +215,9 @@ testX = testX.astype("float32") / 255.0
 * Nadam is employed for noisy gradients or for gradients with high curvatures
 * The learning process is accelerated by summing up the exponential decay of the moving averages for the previous and current gradient
 
+<p align="center">
+  <img src="https://cs231n.github.io/assets/nn3/opt1.gif"><img width="500"
+</p>
 ## Hyperparameter 
 
 * EPOCHS =  10                                                               
