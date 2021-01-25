@@ -17,11 +17,11 @@
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#constructing-labels--dataset-arrays">Constructing Labels & Dataset Arrays</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#splitting-data">Splitting Data</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#encoding--normalization">Encoding & Normalization</a>
-* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#essentials-comparisons">Essential Comparisons</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#essential-comparisons">Essential Comparisons</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#graphs">Graphs</a>
-* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#optimizer-types">Optimizer Types</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#optimizers-types">Optimizer Types</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#hyper-parameters">Hyper-parameters</a>
-* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#improved-models-initialization">Improved Models Initialization</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#improved-models-initializations-pre-trained">Improved Models Initializations</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#training-loop">Training Loop</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#step-function">Step Function</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#testing">Testing</a>
@@ -178,7 +178,7 @@ x_train, x_val, y_train, y_val= train_test_split(x_train,y_train, test_size=0.2,
 
 ```
 
-## Encodeing & Normalization
+## Encoding & Normalization
 ```python
 trainY = to_categorical(trainY, 3)
 testY = to_categorical(testY, 3)
@@ -295,7 +295,7 @@ def trainingloop(model,trainX,trainY,numbrofbatches,EPOCHS,optimizer) :
   epoch_loss_avg.update_state(loss)
 ```
 
-## Step function
+## Step Function
 ```python 
 def step(model,x, y,optimizer):
 # keep track of our gradients
@@ -348,6 +348,8 @@ def testing (modelx,testX,testY):
 | VGG 16      | Pre-Trained Unweighted     |  0.2316  |  92.38%  |  92.29%  |  98.26%  |  87.00%  |  94.22%  |  90.56%  |  98.19%  |  91.07%  |  88.37%  |  93.95%  |
 | VGG 16      | Pre-Trained Freezing Layers|  0.2088  |  95.06%  |  93.58%  |  99.75%  |  88.13%  |  98.34%  |  98.89%  |  97.80%  |  91.88%  |  95.40%  |  99.42%  |
 | Inception V3| Pre-Trained Freezing Layers|  0.1634  |  96.40%  |  94.48%  |  91.53%  |  97.63%  |  98.95%  |  98.61%  |  99.30%  |  94.77%  |  98.06%  |  91.69%  |
+
+## Plots
 
 ### Basic Models Plots
 > Hover Over Plots To Check Model Name
