@@ -98,7 +98,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
 │   │   ├── With Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
-|   |   ├── With Augmentation
+|   |   ├── Without Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
 │   ├── CNN Many Layers Model
@@ -106,7 +106,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
 │   │   ├── With Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
-|   |   ├── With Augmentation
+|   |   ├── Without Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
 │   ├── FCN Many Layers Model
@@ -114,7 +114,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
 │   │   ├── With Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
-|   |   ├── With Augmentation
+|   |   ├── Without Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
 │   └── FCN Few Layers Model
@@ -122,7 +122,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
 │   │   ├── With Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
-|   |   ├── With Augmentation
+|   |   ├── Without Augmentation
 │   │   |   ├── Test Accuracy
 │   │   |   └── Report
 └── Pre-Trained Models
