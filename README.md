@@ -30,6 +30,7 @@
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#results">Results</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#plots">Plots</a>
 * <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#references">References</a>
+* <a href="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/#contributors">Contributors</a>
 
 
 ## Problem Statement
@@ -139,7 +140,7 @@ Given the chest X-ray dataset, our goal is to build a range of neural networks t
     │   ├── Weighted 
     |   |   └── Test Acurracy  
     └── Inception V3
-         └── Freezing
+        └── Freezing
             └── Test Acurracy 
 ```
 
@@ -383,10 +384,7 @@ def testing (modelx,testX,testY):
 * <a href="https://link.springer.com/article/10.1007/s10489-020-01902-1">Deep learning based detection and analysis of COVID-19 on chest X-ray images</a>
 * <a href="https://cv-tricks.com/keras/understand-implement-resnets/">Detailed Guide to Understand and Implement ResNets</a>
 
-<!--
 ## Contributors
--->
-<!--
 <table>
   <tr>
     <td align="center">
@@ -403,7 +401,6 @@ def testing (modelx,testX,testY):
     </td>
   </tr>
  </table>
--->
 
 <p align="center">
   <img width="150" src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/tenor.gif">
