@@ -256,10 +256,9 @@ BS = 64
 INIT_LR = 1e-3
 Optimizer = Adam
 Loss_Function = CrossEntropy
-# The Number Of Layers Differs From One Model To Another
-```
-
-## Fully Connected Layers & Convolution
+* The Number Of Layers Differs From One Model To Another
+* ** 
+## * lly Connected Layers & Convolution
 <p align="center">
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Neural%20Net.gif" width="800">
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Conv.gif" width="400" height="250">
@@ -267,60 +266,60 @@ Loss_Function = CrossEntropy
 ## Fully connected layers model structure 
 ### few layers 
 
-•	Input layers wih shape (256,256,3)and conver
-•	Fully connected layer with 1024 neurons with activation function ReLU
-•	Fully connected layer with 50 neurons with activation function ReLU
-•	Output layer with 3 neurons (same number of labels) with activation function Softmax
+* Input layers wih shape (256,256,3)and conver
+* Fully connected layer with 1024 neurons with activation function ReLU
+* Fully connected layer with 50 neurons with activation function ReLU
+* Output layer with 3 neurons (same number of labels) with activation function Softmax
 
 
 ### Many layer
 
-•	Input layers wih shape (256,256,3)
-•	ully connected layer with 1200 neurons with activation function ReLU
-•	Fdropout layer with .5 
-•	Fully connected layer with 1000 neurons with activation function ReLU
-•	Dropout layer with .5 
-•	Fully connected layer with 900 neurons with activation function ReLU
-•	Dropout layer with .5 
-•	Fully connected layer with 800 neurons with activation function ReLU
-•	Dropout layer with .5 
-•	Fully connected layer with 256 neurons with activation function ReLU
-•	Dropout layer with .5 
-•	Fully connected layer with 128 neurons with activation function ReLU
-•	Dropout layer with .5 
-•	Fully connected layer with 64 neurons with activation function ReLU
-•	Fully connected layer with 32 neurons with activation function ReLU
-•	Fully connected layer with 16 neurons with activation function ReLU
-•	Output layer with 3 neurons(same number of labels) with activation function Softmax
+* Input layers wih shape (256,256,3)
+* Fully connected layer with 1200 neurons with activation function ReLU
+* Fdropout layer with .5 
+* Fully connected layer with 1000 neurons with activation function ReLU
+* Dropout layer with .5 
+* Fully connected layer with 900 neurons with activation function ReLU
+* Dropout layer with .5 
+* Fully connected layer with 800 neurons with activation function ReLU
+* Dropout layer with .5 
+* Fully connected layer with 256 neurons with activation function ReLU
+* Dropout layer with .5 
+* Fully connected layer with 128 neurons with activation function ReLU
+* Dropout layer with .5 
+* Fully connected layer with 64 neurons with activation function ReLU
+* Fully connected layer with 32 neurons with activation function ReLU
+* Fully connected layer with 16 neurons with activation function ReLU
+* Output layer with 3 neurons(same number of labels) with activation function Softmax
 
 
 ###  Few CNN Layers
-•	 Convolution layer with 32 filter and kerel size (3,3) and ReLU activation function.
-•	Maxpooling layer with size (2,2).
-•	Convolution layer with 128 filter and kerel size (3,3) and ReLU activation function. 
-•	Maxpooling layer with size (2,2).
-•	Reshape input to 1D array.
-•	Fully connected layer with 600 neurons with activation function ReLU.
-•	Fully connected layer with 512 neurons with activation function ReLU.
-•	Dropout layer with .3.
-•	Output layer with 3 neurons (same number of labels) with activation function Softmax.
+* Convolution layer with 32 filter and kerel size (3,3) and ReLU activation function.
+* Maxpooling layer with size (2,2).
+* Convolution layer with 128 filter and kerel size (3,3) and ReLU activation function. 
+* Maxpooling layer with size (2,2).
+* Reshape input to 1D array.
+* Fully connected layer with 600 neurons with activation function ReLU.
+* Fully connected layer with 512 neurons with activation function ReLU.
+* Dropout layer with .3.
+* Output layer with 3 neurons (same number of labels) with activation function Softmax.
 
 ### Many CNN Layers
 
-•	Convolution layer with 32 filter and kerel size (3,3) and ReLU activation function.
-•	Maxpooling layer with size (2,2).
-•	Convolution layer with 64 filter and kerel size (3,3) and ReLU activation function.
-•	Maxpooling layer with size (2,2).
-•	Convolution layer with 256 filter and kerel size (3,3) and ReLU activation function.
-•	Maxpooling layer with size (2,2).
-•	Convolution layer with 512 filter and kerel size (3,3) and ReLU activation function.
-•	Maxpooling layer with size (2,2).
-•	Convolution layer with 700 filter and kerel size (3,3) and ReLU activation function.
-•	Maxpooling layer with size (2,2).
-•	Fully connected layer with 256 neurons with activation function ReLU.
-•	Fully connected layer with 1024 neurons with activation function ReLU.
-•	Dropout layer with .3.
-•	Output layer with 3 neurons (same number of labels) with activation function Softmax.
+* Convolution layer with 32 filter and kerel size (3,3) and ReLU activation function.
+* Maxpooling layer with size (2,2).
+* Convolution layer with 64 filter and kerel size (3,3) and ReLU activation function.
+* Maxpooling layer with size (2,2).
+* Convolution layer with 256 filter and kerel size (3,3) and ReLU activation function.
+* Maxpooling layer with size (2,2).
+* Convolution layer with 512 filter and kerel size (3,3) and ReLU activation function.
+ Maxpooling layer with size (2,2).
+* onvolution layer with 700 filter and kerel size (3,3) and ReLU activation function.
+* Maxpooling layer with size (2,2).
+* Fully connected layer with 256 neurons with activation function ReLU.
+* Fully connected layer with 1024 neurons with activation function ReLU.
+* Dropout layer with .3.
+* Output layer with 3 neurons (same number of labels) with activation function Softmax.
 
 
 ## Improved Models Initializations (Pre-Trained)
@@ -408,7 +407,6 @@ def testing (modelx,testX,testY):
 | ResNet 50   | Pre-Trained Weighted |  0.2736  |  97.03%  |  96.86%  |  96.02%  |  97.72%  |  98.74%  |  98.33%  |  99.16%  |  96.58%  |  97.77%  |  95.41%  |
 | ResNet 50   | Random weights    |  0.2559  |  94.08%  |  93.28%  |  91.54%  |  95.09%  |  97.02%  |  96.11%  |  98.03%  |  92.18%  |  94.80%  |  98.70%  |
 | VGG 16      | Pre-Trained Weighted |  0.1652  |  95.05%  |  95.10%  |  96.52%  |  93.72%  |  85.89%  |  93.89%  |  97.97%  |  92.97%  |  93.32%  |  92.63%  |
-
 | VGG 16      | Random weights |  0.2088  |  95.06%  |  93.58%  |  99.75%  |  88.13%  |  98.34%  |  98.89%  |  97.80%  |  91.88%  |  95.40%  |  99.42%  |
 | Inception V3| Pre-Trained Freezing Layers|  0.1634  |  96.40%  |  94.48%  |  91.53%  |  97.63%  |  98.95%  |  98.61%  |  99.30%  |  94.77%  |  98.06%  |  91.69%  |
 
