@@ -167,6 +167,10 @@ data_augmentation = tf.keras.Sequential([
   layers.experimental.preprocessing.RandomRotation(0.2),
 ]) 
 ```
+<p align="center">
+  <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/augment.PNG" width="650" title="Augmentation process ">
+
+</p>
 
 ## Constructing Labels & Dataset Arrays
 ```python
@@ -256,14 +260,17 @@ BS = 64
 INIT_LR = 1e-3
 Optimizer = Adam
 Loss_Function = CrossEntropy
+```
 * The Number Of Layers Differs From One Model To Another
 * ** 
-## * lly Connected Layers & Convolution
+## Fully Connected Layers & Convolution
 <p align="center">
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Neural%20Net.gif" width="800">
   <img src="https://github.com/ahmedsamy1234/Chest-X-Ray-Diagnosis/blob/main/Conv.gif" width="400" height="250">
 </p>
+
 ## Fully connected layers model structure 
+
 ### few layers 
 
 * Input layers wih shape (256,256,3)and conver
@@ -292,8 +299,9 @@ Loss_Function = CrossEntropy
 * Fully connected layer with 16 neurons with activation function ReLU
 * Output layer with 3 neurons(same number of labels) with activation function Softmax
 
-
+## CCN layers model structure
 ###  Few CNN Layers
+
 * Convolution layer with 32 filter and kerel size (3,3) and ReLU activation function.
 * Maxpooling layer with size (2,2).
 * Convolution layer with 128 filter and kerel size (3,3) and ReLU activation function. 
